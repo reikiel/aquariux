@@ -25,6 +25,9 @@ public class TradeController {
     @Operation(summary = "Execute trade", description = "Execute a buy or sell trade for cryptocurrency pairs")
     public ResponseEntity<TradeResponse> executeTrade(@RequestBody TradeRequest tradeRequest) {
         // TODO: How should a trading API endpoint behave?
+        // validate request fields using jakarta if have time
+        // ControllerAdvice if have time
+        // others should be in service
         return ResponseEntity.ok(tradeService.executeTrade(tradeRequest));
     }
 }
